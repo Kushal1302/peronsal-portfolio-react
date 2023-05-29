@@ -3,6 +3,9 @@ import { NavLink } from 'react-router-dom';
 import ClearAllIcon from '@mui/icons-material/ClearAll';
 import './index.css'
 const Navbar = () =>{
+  const download = () => {
+    window.location = 'https://drive.google.com/file/d/1_EaV0aWEtWBU6gLQMvnSVOK0kJ1t5G1K/view?usp=sharing'
+  }
   return (<>
 <div className="nav-bg">
     <div className="row">
@@ -29,6 +32,9 @@ const Navbar = () =>{
         </li>
         <li className="nav-item">
           <NavLink className="nav-link" activeClassName="menu-active" exact to="/contact">Contact</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" activeClassName="menu-active" exact onClick={() => download()}> Download Resume</NavLink>
         </li>
         
       </ul>
